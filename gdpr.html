@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDPR & Data Portability Compliance - BetterLife AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <style>
+    .legal-container {
+      max-width: 800px;
+      margin: 120px auto 60px auto;
+      padding: 40px;
+      background: rgba(26, 21, 72, 0.45);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(155, 93, 229, 0.25);
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(8, 4, 27, 0.5);
+    }
+    .legal-title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+      text-align: center;
+    }
+    .legal-subtitle {
+      font-size: 1rem;
+      color: var(--text-tertiary);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(155, 93, 229, 0.15);
+      padding-bottom: 5px;
+    }
+    .legal-content p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .legal-content ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: var(--text-secondary);
+    }
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+    .back-home {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+    .back-home:hover {
+      color: var(--gold);
+      transform: translateX(-5px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="assets/app_icon.png" alt="BetterLife Brand Icon" class="logo-img">
+      <span class="logo-text">BetterLife</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="btn-cta">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="legal-container">
+    <a href="index.html" class="back-home">← Back to Home</a>
+    <h1 class="legal-title">GDPR & Data Portability</h1>
+    <div class="legal-subtitle">Compliance Standards | UK English Version</div>
+
+    <div class="legal-content">
+      <p>
+        At BetterLife, we have built a **zero-tracking, local-first** technical architecture designed to give you absolute control over your digital footprint. We are fully aligned with the strict standards of the **UK General Data Protection Regulation (UK GDPR)** and the European Union’s **GDPR (Regulation (EU) 2016/679)**.
+      </p>
+
+      <h2>1. The Four Pillars of Our GDPR Architecture</h2>
+      <p>
+        Traditional mobile apps store user data on remote databases, exposing users to tracking and potential data leaks. BetterLife re-engineers this relationship through absolute client-side sovereignty:
+      </p>
+      <ul>
+        <li><strong>Right to Access & Portability (Article 20):</strong> Under GDPR, you have the right to request all data collected about you in a clean, machine-readable format. Inside the **Profile Dashboard** of the App, you can execute a one-click **"Export my data"** request. The App instantly aggregates your profile metrics, streaks, active goals, and session logs, outputting a complete, standard **JSON document** that you can save or share directly.</li>
+        <li><strong>Right to be Forgotten / Erasure (Article 17):</strong> Purging your digital footprint should not require sending an email to a support desk. Under the Profile settings, tapping **"Delete all my data"** triggers a complete sandbox invalidation command. This instantly and permanently deletes all persistent caching keys, leaving zero trace of your personal records or session files on your device or the web.</li>
+        <li><strong>Right to Rectification (Article 16):</strong> You maintain full authority to modify any data point, including focus domains, email addresses, and coaching tone selections, directly inside the settings sheet. The changes compile and save locally in real-time.</li>
+        <li><strong>Data Protection by Design & Default (Article 25):</strong> Privacy is not a toggle-switch or an afterthought. By default, the App does not log, track, or share your activities. We do not use third-party analytics trackers, behavioral cookies, or commercial advertising SDKs.</li>
+      </ul>
+
+      <h2>2. Data Processing Agreements (DPA)</h2>
+      <p>
+        The only processing that occurs off-device is the secure semantic generation of your coach replies. When a chat message is sent:
+      </p>
+      <p>
+        It is securely processed under standard enterprise protection agreements. The processing endpoint acts strictly as a **Data Processor** on behalf of the App. The processor is explicitly bound to a **zero-training agreement**, guaranteeing that your session entries will not be recorded or used to train public machine learning systems.
+      </p>
+
+      <h2>3. Enforcement & Redress</h2>
+      <p>
+        If you are a resident of the United Kingdom or the European Economic Area (EEA), you have the right to lodge a complaint with a supervisory authority. In the UK, this is the **Information Commissioner's Office (ICO)** (www.ico.org.uk).
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="assets/app_icon.png" alt="BetterLife Brand Icon" class="logo-img">
+          <span class="logo-text">BetterLife</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 BetterLife Technologies. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
