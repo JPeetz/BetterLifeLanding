@@ -141,22 +141,24 @@ nav {
 /* --- Hero Section --- */
 .hero {
   padding: 10rem 5% 6rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1f 0.9fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  text-align: center;
+  gap: 3.5rem;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
 }
 
 .hero-tag {
-  align-self: flex-start;
+  align-self: center;
   background: rgba(123, 47, 190, 0.2);
   border: 1px solid var(--violet-light);
   color: var(--violet-light);
@@ -184,10 +186,12 @@ nav {
 .hero-desc {
   font-size: 1.15rem;
   line-height: 1.6;
+  max-width: 700px;
 }
 
 .hero-btns {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
