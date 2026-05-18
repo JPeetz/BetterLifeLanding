@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
     }
 
     try {
-        let visitCount = 10523; // High-status base visit count fallback
+        let visitCount = 0; // Absolute organic baseline
 
         // Connect to Vercel KV edge database if configured
         if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
         } else {
             // Dev in-memory session counter simulator
             if (!global.devVisitCount) {
-                global.devVisitCount = 10523;
+                global.devVisitCount = 0;
             }
             global.devVisitCount += 1;
             visitCount = global.devVisitCount;

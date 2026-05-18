@@ -161,12 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
           const padded = formatted.padStart(7, '0');
           visitCountEl.textContent = padded;
         } else {
-          visitCountEl.textContent = '010,524';
+          visitCountEl.textContent = '000,000';
         }
       })
       .catch(err => {
         console.error('Counter fetch error:', err);
-        visitCountEl.textContent = '010,524';
+        visitCountEl.textContent = '000,000';
       });
   }
 });
