@@ -139,6 +139,206 @@
     </div>
   </section>
 
+  <!-- --- EXECUTIVE FATIGUE DIAGNOSTIC QUIZ SECTION --- -->
+  <section id="quiz-section" style="padding: 80px 0; background: rgba(8, 4, 27, 0.45); border-bottom: 1px solid rgba(155, 93, 229, 0.15);">
+    <div class="container" style="max-width: 750px; margin: 0 auto; padding: 0 20px; text-align: center;">
+      <span class="section-tag" style="background: rgba(0, 176, 255, 0.15); color: #00E5FF; border: 1px solid rgba(0, 176, 255, 0.3); padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 15px;">Diagnostic Blueprint</span>
+      <h2 style="font-family: var(--font-display); font-size: 2.25rem; font-weight: 800; color: #ffffff; margin-bottom: 12px; letter-spacing: -0.02em;">Take the Executive Fatigue Diagnostic Quiz</h2>
+      <p style="font-size: 1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6;">
+        Discover your primary cognitive fatigue triggers and unlock a tailored personal coaching plan preview from Aria and Aeron in less than 60 seconds.
+      </p>
+
+      <div id="quiz-container" style="background: rgba(26, 21, 72, 0.45); backdrop-filter: blur(20px); border: 1px solid rgba(155, 93, 229, 0.25); border-radius: 20px; padding: 40px; text-align: left; box-shadow: 0 15px 35px rgba(8, 4, 27, 0.5); min-height: 380px; position: relative; transition: all 0.3s ease;">
+        <!-- Progress bar indicator -->
+        <div style="width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; margin-bottom: 30px; overflow: hidden;">
+          <div id="quiz-progress" style="width: 20%; height: 100%; background: linear-gradient(90deg, var(--violet), #00E5FF); transition: width 0.4s ease-in-out;"></div>
+        </div>
+
+        <form id="diagnostic-quiz-form" onsubmit="return false;">
+          <!-- Honeypot -->
+          <input type="text" id="quiz-honeypot" style="display: none;" autocomplete="off" tabIndex="-1">
+
+          <!-- STEP 1: Q1 -->
+          <div class="quiz-step" data-step="1" style="display: block;">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff; margin-bottom: 20px; font-weight: 700; line-height: 1.4;">
+              1. How often do you find yourself doomscrolling or side-tracked during high-priority tasks?
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q1" value="1" required style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Never – I stay exceptionally focused under all circumstances.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q1" value="2" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Rarely – Only when my daily energy levels are extremely depleted.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q1" value="3" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Frequently – Distractions disrupt my morning flow several times a week.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q1" value="4" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Critical Focus Freeze – Procrastination blocks task completions almost daily.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 2: Q2 -->
+          <div class="quiz-step" data-step="2" style="display: none;">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff; margin-bottom: 20px; font-weight: 700; line-height: 1.4;">
+              2. What is your primary cognitive friction trigger?
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q2" value="1" required style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Initiation Deficit – Actually taking the first physical step to start a task.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q2" value="2" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Mid-Day Executive Burnout – Losing momentum after 2-3 hours of intense deep work.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q2" value="3" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Complexity Paralysis – Feeling overwhelmed by massive, open-ended objectives.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 3: Q3 -->
+          <div class="quiz-step" data-step="3" style="display: none;">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff; margin-bottom: 20px; font-weight: 700; line-height: 1.4;">
+              3. How do you react mentally when you slip or miss a target?
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q3" value="1" required style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Objective Analysis – I adjust my targets immediately and maintain positive action.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q3" value="2" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Avoidance & Self-Criticism – I feel guilty, which often results in ignoring the app or goal.</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q3" value="3" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Indifference – I don't experience emotional friction, but I struggle with structure.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 4: Q4 -->
+          <div class="quiz-step" data-step="4" style="display: none;">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff; margin-bottom: 20px; font-weight: 700; line-height: 1.4;">
+              4. What coaching style keeps you structurally aligned?
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q4" value="1" required style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Empathetic & Supportive – Nurturing cognitive reframing, deep reflection, and guidance (Aria).</span>
+              </label>
+              <label class="quiz-option" style="display: flex; align-items: center; gap: 12px; background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.08); padding: 15px 20px; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;">
+                <input type="radio" name="q4" value="2" style="accent-color: #00E5FF;">
+                <span style="color: #fff; font-size: 0.95rem;">Strict & Logic-Driven – Assertive challenges, clear metric checkpoints, and accountability (Aeron).</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 5: Q5 & EMAIL LOCK-IN -->
+          <div class="quiz-step" data-step="5" style="display: none;">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #fff; margin-bottom: 15px; font-weight: 700; line-height: 1.4;">
+              5. Final Step: Where should we secure your dynamic diagnostic profile key?
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.4;">
+              Your data is encrypted symmetrically (AES-256) at rest. Submit to secure your personal plan preview from Aria and Aeron instantly.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+              <input type="email" id="quiz-email" placeholder="Enter your secure email address" required 
+                     style="width: 100%; padding: 14px 18px; border-radius: 8px; border: 1px solid rgba(155, 93, 229, 0.25); background: rgba(8, 4, 27, 0.5); color: #ffffff; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: all 0.3s ease;"
+                     onfocus="this.style.borderColor='#00E5FF'; this.style.boxShadow='0 0 10px rgba(0, 229, 255, 0.4)';"
+                     onblur="this.style.borderColor='rgba(155, 93, 229, 0.25)'; this.style.boxShadow='none';">
+              
+              <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; user-select: none;">
+                <input type="checkbox" id="quiz-consent" required style="margin-top: 3px; cursor: pointer;">
+                <span>I consent to secure encryption processing and agree to lock in my diagnostic scores to my <a href="privacy.html" target="_blank" style="color: #00E5FF; text-decoration: underline;">Privacy Profile</a>.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 35px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+            <button type="button" id="quiz-prev-btn" style="padding: 10px 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: #fff; font-family: var(--font-display); font-weight: 600; cursor: pointer; display: none; transition: all 0.2s ease;"
+                    onmouseover="this.style.background='rgba(255,255,255,0.05)';"
+                    onmouseout="this.style.background='transparent';">
+              Back
+            </button>
+            <div style="flex: 1;"></div>
+            <button type="button" id="quiz-next-btn" style="padding: 12px 28px; border-radius: 8px; border: none; background: linear-gradient(135deg, var(--violet), var(--violet-light)); color: #ffffff; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 15px rgba(123, 47, 190, 0.3);"
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(123, 47, 190, 0.5)';"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(123, 47, 190, 0.3)';">
+              Next Step
+            </button>
+          </div>
+        </form>
+
+        <!-- Feedback & Results Loading overlay -->
+        <div id="quiz-loading" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(8,4,27,0.9); border-radius: 20px; flex-direction: column; align-items: center; justify-content: center; gap: 20px; text-align: center; padding: 40px; box-sizing: border-box; z-index: 10;">
+          <div style="width: 50px; height: 50px; border: 3px solid rgba(155, 93, 229, 0.2); border-top-color: #00E5FF; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+          <h4 style="color: #fff; font-family: var(--font-display); font-size: 1.2rem; margin: 0;">Analyzing Cognitive Profiles...</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Securing edge connection and calculating Aria & Aeron diagnostic vectors.</p>
+        </div>
+
+        <!-- Dynamic Results Screen -->
+        <div id="quiz-results" style="display: none; flex-direction: column; gap: 25px;">
+          <div style="border-bottom: 1px solid rgba(0, 229, 255, 0.2); padding-bottom: 15px; margin-bottom: 5px;">
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #00E5FF; font-weight: 700;">Diagnostic Result Locked</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin-top: 5px; margin-bottom: 0;">Your Cognitive Coaching Blueprint</h3>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div style="background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
+              <h4 style="font-family: var(--font-display); color: #00E5FF; font-size: 1.05rem; margin-top: 0; margin-bottom: 10px;">Primary AI Coach Blueprint</h4>
+              <p id="res-primary-coach" style="color: #fff; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px;"></p>
+              <p id="res-primary-desc" style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4; margin: 0;"></p>
+            </div>
+            
+            <div style="background: rgba(8,4,27,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;">
+              <h4 style="font-family: var(--font-display); color: var(--violet-light); font-size: 1.05rem; margin-top: 0; margin-bottom: 10px;">Secondary AI Coach</h4>
+              <p id="res-secondary-coach" style="color: #fff; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px;"></p>
+              <p id="res-secondary-desc" style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4; margin: 0;"></p>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div style="background: rgba(245, 166, 35, 0.08); border: 1px solid rgba(245, 166, 35, 0.2); border-radius: 12px; padding: 20px;">
+              <h4 style="font-family: var(--font-display); color: #F5A623; font-size: 1.05rem; margin-top: 0; margin-bottom: 10px;">Attention Vulnerability</h4>
+              <p id="res-fatigue-tier" style="color: #fff; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px;"></p>
+              <p id="res-custom-tool" style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4; margin: 0;"></p>
+            </div>
+
+            <div style="background: rgba(8, 180, 255, 0.08); border: 1px solid rgba(0, 176, 255, 0.2); border-radius: 12px; padding: 20px;">
+              <h4 style="font-family: var(--font-display); color: #00E5FF; font-size: 1.05rem; margin-top: 0; margin-bottom: 10px;">Shame & Streak Strategy</h4>
+              <p id="res-shame-trigger" style="color: #fff; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px;"></p>
+              <p id="res-streak-strategy" style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4; margin: 0;"></p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 15px;">
+              Your profile has been saved with secure ID: <strong id="res-diagnostic-id" style="color: #00E5FF; font-family: monospace;"></strong>. Download the app to load your blueprint instantly.
+            </p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+              <a href="#" class="btn-cta">Download for iOS</a>
+              <a href="#" class="btn-cta" style="background: linear-gradient(135deg, #00B0FF, #00E5FF); box-shadow: 0 4px 15px rgba(0, 176, 255, 0.4);">Download for Android</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- General Error Output Box -->
+        <div id="quiz-error" style="display: none; background: rgba(239, 71, 111, 0.1); border: 1px solid rgba(239, 71, 111, 0.3); border-radius: 12px; padding: 15px; color: #EF476F; margin-top: 20px; font-size: 0.9rem; font-weight: 500;"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- --- Core Benefits ("What to Expect") --- -->
   <section class="section" id="features">
     <div class="section-hdr">
@@ -357,6 +557,66 @@
             Baseline coaching behaviors adapt dynamically across 5 regions. Aria/Aeron uses understated modesty for the UK, ambitious scaling optimism for the US, empirical pragmatic logic for Germany, collective balance for Japan, and efficiency hacks for Singapore.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- PREMIUM PLANS SECTION --- -->
+  <section class="section" id="pricing" style="background: rgba(8, 4, 27, 0.25); border-bottom: 1px solid rgba(155, 93, 229, 0.15);">
+    <div class="section-hdr">
+      <span class="section-tag" style="background: rgba(0, 176, 255, 0.15); color: #00E5FF; border: 1px solid rgba(0, 176, 255, 0.3); padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 15px;">Pricing Plans</span>
+      <h2 class="section-title">Transparent, Value-First Options</h2>
+      <p>
+        Onboarding, initial planning, and your first three (3) active coaching sessions are completely free of charge. Upgrade to secure unlimited daily focus guidance and complete cognitive metrics logs.
+      </p>
+    </div>
+
+    <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin: 40px auto 0 auto; padding: 0 20px;">
+      <!-- Monthly Plan -->
+      <div style="flex: 1; min-width: 290px; max-width: 350px; background: rgba(26,21,72,0.45); border: 1px solid rgba(155,93,229,0.2); border-radius: 20px; padding: 35px; text-align: center; backdrop-filter: blur(15px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: space-between; min-height: 400px; box-sizing: border-box;">
+        <div>
+          <h4 style="font-family: var(--font-display); color: #fff; font-size: 1.3rem; margin-top: 0; margin-bottom: 10px;">Monthly Sprint</h4>
+          <div style="font-size: 2.5rem; font-weight: 800; color: var(--violet-light); margin: 20px 0;">$9.99<span style="font-size: 0.9rem; font-weight: 400; color: var(--text-secondary);">/mo</span></div>
+          <ul style="text-align: left; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
+            <li>Unlimited chat with Aria & Aeron</li>
+            <li>Advanced coach tone adjustments</li>
+            <li>Timed focus push notifications</li>
+            <li>Basic daily streak metrics</li>
+          </ul>
+        </div>
+        <a href="#" class="btn-cta" style="width: 100%; box-sizing: border-box; text-align: center;">Start Free Trial</a>
+      </div>
+
+      <!-- Annual Plan -->
+      <div style="flex: 1; min-width: 290px; max-width: 350px; background: rgba(26,21,72,0.65); border: 2px solid var(--violet-light); border-radius: 20px; padding: 35px; text-align: center; backdrop-filter: blur(15px); box-shadow: 0 15px 40px rgba(123, 47, 190, 0.2); display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; box-sizing: border-box; position: relative; transform: translateY(-10px);">
+        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; font-family: var(--font-display); font-size: 0.75rem; font-weight: 800; padding: 4px 14px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap;">Most Popular</div>
+        <div>
+          <h4 style="font-family: var(--font-display); color: #fff; font-size: 1.3rem; margin-top: 0; margin-bottom: 10px;">Annual Sprint</h4>
+          <div style="font-size: 2.5rem; font-weight: 800; color: var(--violet-light); margin: 20px 0;">$79.99<span style="font-size: 0.9rem; font-weight: 400; color: var(--text-secondary);">/yr</span></div>
+          <ul style="text-align: left; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
+            <li>Unlimited daily sessions (Save 33%)</li>
+            <li>ADHD Procrastination SOS Widget</li>
+            <li>CBT Cognitive Thought Reframer</li>
+            <li>Full Executive Insights Dashboard</li>
+          </ul>
+        </div>
+        <a href="#" class="btn-cta" style="width: 100%; box-sizing: border-box; text-align: center; background: linear-gradient(135deg, var(--violet), var(--violet-light));">Start Free Trial</a>
+      </div>
+
+      <!-- Lifetime Ownership -->
+      <div style="flex: 1; min-width: 290px; max-width: 350px; background: rgba(26,21,72,0.45); border: 1px solid rgba(0, 176, 255, 0.3); border-radius: 20px; padding: 35px; text-align: center; backdrop-filter: blur(15px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; justify-content: space-between; min-height: 400px; box-sizing: border-box; position: relative;">
+        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00B0FF, #00E5FF); color: #08041B; font-family: var(--font-display); font-size: 0.75rem; font-weight: 800; padding: 4px 14px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap;">Privacy First</div>
+        <div>
+          <h4 style="font-family: var(--font-display); color: #fff; font-size: 1.3rem; margin-top: 0; margin-bottom: 10px;">Lifetime Owner</h4>
+          <div style="font-size: 2.5rem; font-weight: 800; color: #00E5FF; margin: 20px 0;">$149.99<span style="font-size: 0.9rem; font-weight: 400; color: var(--text-secondary);"> once</span></div>
+          <ul style="text-align: left; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
+            <li>Absolute one-time purchase</li>
+            <li>No recurring subscription fees</li>
+            <li>100% locally private on-device</li>
+            <li>Full access to all future upgrades</li>
+          </ul>
+        </div>
+        <a href="#" class="btn-cta" style="width: 100%; box-sizing: border-box; text-align: center; background: linear-gradient(135deg, #00B0FF, #00E5FF); box-shadow: 0 4px 15px rgba(0, 176, 255, 0.4);">Own Forever</a>
       </div>
     </div>
   </section>
