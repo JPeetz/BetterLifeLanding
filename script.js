@@ -148,4 +148,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Page Visit Counter Loader ---
+  const visitCountEl = document.getElementById('visit-count');
+  if (visitCountEl) {
+    fetch('/api/visit-counter')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.count) {
+          // Format count with commas and pad to at least 6 digits
+          const formatted = String(data.count).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          const padded = formatted.padStart(7, '0');
+          visitCountEl.textContent = padded;
+        } else {
+          visitCountEl.textContent = '010,524';
+        }
+      })
+      .catch(err => {
+        console.error('Counter fetch error:', err);
+        visitCountEl.textContent = '010,524';
+      });
+  }
 });
