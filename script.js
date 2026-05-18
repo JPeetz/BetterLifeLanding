@@ -89,4 +89,63 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set initial position
   setTimeout(updateCarousel, 300);
+
+  // --- AJAX Release Notification Subscription ---
+  const subscribeForm = document.getElementById('subscribe-form');
+  const subEmail = document.getElementById('sub-email');
+  const subHoneypot = document.getElementById('sub-honeypot');
+  const subConsent = document.getElementById('sub-consent');
+  const subSubmit = document.getElementById('sub-submit');
+  const subMessage = document.getElementById('subscribe-message');
+
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Clear previous messages
+      subMessage.style.display = 'none';
+      subMessage.style.color = '';
+      subMessage.textContent = '';
+
+      // Disable button
+      subSubmit.disabled = true;
+      subSubmit.textContent = 'Registering...';
+
+      const payload = {
+        email: subEmail.value,
+        honeypot: subHoneypot.value,
+        consent: subConsent.checked
+      };
+
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => response.json().then(data => ({ status: response.status, body: data })))
+      .then(({ status, body }) => {
+        subMessage.style.display = 'block';
+        if (status === 200 && body.success) {
+          subMessage.style.color = '#06D6A0'; // Success green
+          subMessage.textContent = body.message || 'Success! You have been registered.';
+          subscribeForm.reset();
+        } else {
+          subMessage.style.color = '#EF476F'; // Error coral/red
+          subMessage.textContent = body.error || 'An operational registration error occurred.';
+        }
+      })
+      .catch(err => {
+        console.error('Subscription error:', err);
+        subMessage.style.display = 'block';
+        subMessage.style.color = '#EF476F';
+        subMessage.textContent = 'Connection failed. Please check your network or try again.';
+      })
+      .finally(() => {
+        subSubmit.disabled = false;
+        subSubmit.textContent = 'Notify Me';
+      });
+    });
+  }
 });

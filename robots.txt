@@ -1,5 +1,27 @@
-User-agent: *
-Allow: /
+# ==========================================
+# Robots.txt for BetterLife - AI Search & Crawler Optimization
+# ==========================================
 
-# Sitemap Location
+# 1. ENCOURAGE AI SEARCH AND DATA MINING BOT CITATIONS
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Applebot
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+Allow: /
+Allow: /assets/
+Disallow: /api/
+
+# 2. STANDARD SEO SEARCH BOT CITATIONS
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+
+# Sitemaps
 Sitemap: https://betterlife-landing.vercel.app/sitemap.xml

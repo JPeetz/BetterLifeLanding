@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Disclaimer - BetterLife AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <style>
+    .legal-container {
+      max-width: 800px;
+      margin: 120px auto 60px auto;
+      padding: 40px;
+      background: rgba(26, 21, 72, 0.45);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(155, 93, 229, 0.25);
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(8, 4, 27, 0.5);
+    }
+    .legal-title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+      text-align: center;
+    }
+    .legal-subtitle {
+      font-size: 1rem;
+      color: var(--text-tertiary);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(155, 93, 229, 0.15);
+      padding-bottom: 5px;
+    }
+    .legal-content p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .back-home {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+    .back-home:hover {
+      color: var(--gold);
+      transform: translateX(-5px);
+    }
+
+    /* Crisis Escalation Styles */
+    .crisis-panel {
+        background: rgba(239, 35, 60, 0.05);
+        border: 1px solid rgba(239, 35, 60, 0.20);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2rem 0;
+        box-shadow: 0 10px 25px rgba(239, 35, 60, 0.05);
+    }
+    
+    .crisis-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ef233c;
+        margin-top: 0 !important;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .crisis-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .crisis-card {
+        background: rgba(8, 4, 27, 0.4);
+        border: 1px solid rgba(239, 35, 60, 0.15);
+        padding: 1.25rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .crisis-region {
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+    }
+    
+    .crisis-numbers {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #ef233c;
+        margin-bottom: 0.25rem;
+    }
+    
+    .crisis-subtext {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="assets/app_icon.png" alt="BetterLife Brand Icon" class="logo-img">
+      <span class="logo-text">BetterLife</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="btn-cta">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="legal-container">
+    <a href="index.html" class="back-home">← Back to Home</a>
+    <h1 class="legal-title">Medical Disclaimer</h1>
+    <div class="legal-subtitle">Clinical Boundaries, AI Transparency, and Crisis Escalation Protocols</div>
+
+    <div class="legal-content">
+      <p>
+        Please read this Medical Disclaimer carefully before using the BetterLife iOS application or exploring our coaching interfaces. BetterLife is built strictly as an auxiliary tool for behavioral accountability, productivity, habit optimization, and cognitive performance coaching.
+      </p>
+
+      <!-- Crisis Escalation Panel -->
+      <div class="crisis-panel">
+          <h3 class="crisis-title">
+              🚨 If You Are in Active Crisis or Danger
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+              BetterLife is an automated coaching tool and is <strong>strictly incapable of managing mental health emergencies, acute clinical distress, self-harm, or psychological crises</strong>. If you feel that you or someone you know is in immediate danger, please contact professional emergency responders or support helplines immediately:
+          </p>
+          <div class="crisis-grid">
+              <div class="crisis-card" id="crisis-card-gb">
+                  <div class="crisis-region"><span class="crisis-geo-badge"></span>United Kingdom</div>
+                  <div class="crisis-numbers">Call 111 / 999</div>
+                  <div class="crisis-subtext">Contact the Samaritans at 116 123 for free, 24/7 anonymous listening support.</div>
+              </div>
+              <div class="crisis-card" id="crisis-card-us">
+                  <div class="crisis-region"><span class="crisis-geo-badge"></span>United States & Canada</div>
+                  <div class="crisis-numbers">Call 988 / 911</div>
+                  <div class="crisis-subtext">The 988 Suicide & Crisis Lifeline provides free, confidential 24/7 support.</div>
+              </div>
+              <div class="crisis-card" id="crisis-card-eu">
+                  <div class="crisis-region"><span class="crisis-geo-badge"></span>European Union</div>
+                  <div class="crisis-numbers">Call 112</div>
+                  <div class="crisis-subtext">The universal European emergency services number, accessible free of charge.</div>
+              </div>
+          </div>
+      </div>
+
+      <h2>1. Non-Medical & Non-Clinical Services Boundary</h2>
+      <p>
+        BetterLife is <strong>not a medical device, clinical service, or licensed psychiatric therapy utility</strong>.
+      </p>
+      <p>
+        Our automated systems and interactive interfaces do not offer medical diagnosis, medication advice, psychiatric treatment, clinical psychology consultations, or healing plans. The guidance generated by our AI modules (Aria and Aeron) represents simulated behavioral prompts designed strictly for performance coaching, cognitive restructuring, and daily productivity training.
+      </p>
+      <p>
+        If you are suffering from a diagnosed clinical condition—such as major clinical depression, acute general anxiety disorder, clinical ADHD, bipolar disorder, or complex PTSD—you must consult a licensed medical professional, therapist, or psychiatrist. BetterLife should not be used as a replacement for, or in contradiction to, any professional medical advice or ongoing treatment plan.
+      </p>
+
+      <h2>2. AI Transparency Disclosure</h2>
+      <p>
+        In strict alignment with state-level consumer protection acts and emerging AI transparency regulations, we explicitly state:
+      </p>
+      <p>
+        <strong>Aria and Aeron are not human beings.</strong> They are custom conversational agents powered by state-of-the-art Large Language Models (LLMs) running direct semantic inferences. While their training leverages cognitive-behavioral coaching principles, they do not possess empathy, medical intuition, or professional clinical licensing. 
+      </p>
+
+      <h2>3. Limit of Liability & Technical Reliability</h2>
+      <p>
+        Because BetterLife is built to act as a self-help mirror, we operate under a strict limitation of liability:
+      </p>
+      <p>
+        We do not guarantee the clinical or behavioral outcome of any goal, routine, or cognitive reframing exercise. The suggestions are executed entirely at the user's personal discretion. BetterLife Technologies Inc. holds zero liability for any personal, physical, mental, or financial consequences arising from your interactions with the AI systems or the tracking of streaks.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="assets/app_icon.png" alt="BetterLife Brand Icon" class="logo-img">
+          <span class="logo-text">BetterLife</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 Joerg Peetz. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Privacy-first GeoIP fetch
+          fetch("https://ipapi.co/json/")
+              .then(response => response.json())
+              .then(data => {
+                  var countryCode = data.country_code;
+                  var targetId = "";
+                  
+                  if (countryCode === "GB") {
+                      targetId = "crisis-card-gb";
+                  } else if (countryCode === "US" || countryCode === "CA") {
+                      targetId = "crisis-card-us";
+                  } else if (["DE", "FR", "IT", "ES", "NL", "BE", "AT", "CH", "SE", "NO", "FI", "DK", "IE", "PL", "GR", "PT"].includes(countryCode)) {
+                      targetId = "crisis-card-eu";
+                  }
+                  
+                  if (targetId) {
+                      var card = document.getElementById(targetId);
+                      if (card) {
+                          // Apply glowing highlighted style
+                          card.style.border = "2px solid #ef233c";
+                          card.style.boxShadow = "0 0 30px rgba(239, 35, 60, 0.45)";
+                          card.style.background = "linear-gradient(135deg, rgba(239, 35, 60, 0.25) 0%, rgba(8, 4, 27, 0.6) 100%)";
+                          
+                          // Prepends the beautiful badge
+                          var badge = card.querySelector(".crisis-geo-badge");
+                          if (badge) {
+                              badge.innerHTML = "📍 Local Helpline (Detected) • ";
+                              badge.style.color = "#ef233c";
+                              badge.style.fontWeight = "800";
+                              badge.style.display = "inline";
+                          }
+                      }
+                  }
+              })
+              .catch(error => {
+                  console.log("Graceful GeoIP Fallback: All emergency systems operating standard.");
+              });
+      });
+  </script>
+</body>
+</html>

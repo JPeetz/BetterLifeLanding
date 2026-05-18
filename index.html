@@ -387,6 +387,44 @@
     </div>
   </section>
 
+  <!-- --- GET NOTIFIED ON THE OFFICIAL RELEASE SECTION --- -->
+  <section id="subscribe" style="padding: 80px 0; background: rgba(8, 4, 27, 0.35); border-top: 1px solid rgba(155, 93, 229, 0.15); border-bottom: 1px solid rgba(155, 93, 229, 0.15);">
+    <div class="container" style="max-width: 600px; margin: 0 auto; padding: 0 20px; text-align: center;">
+      <div style="background: rgba(26, 21, 72, 0.45); backdrop-filter: blur(20px); border: 1px solid rgba(155, 93, 229, 0.25); border-radius: 16px; padding: 40px; box-shadow: 0 15px 35px rgba(8, 4, 27, 0.5);">
+        <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.01em;">Get Notified on the Release</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.5;">
+          Be the first to optimize your executive focus. Subscribe for instant access key alerts and secure launch updates.
+        </p>
+
+        <form id="subscribe-form" style="display: flex; flex-direction: column; gap: 12px; text-align: left;">
+          <!-- Honeypot anti-spam hidden input -->
+          <input type="text" name="honeypot" id="sub-honeypot" style="display: none;" autocomplete="off" tabIndex="-1">
+          
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="email" id="sub-email" placeholder="Enter your email address" required 
+                   style="flex: 1; min-width: 250px; padding: 12px 18px; border-radius: 8px; border: 1px solid rgba(155, 93, 229, 0.25); background: rgba(8, 4, 27, 0.5); color: #ffffff; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: all 0.3s ease;"
+                   onfocus="this.style.borderColor='var(--violet-light)'; this.style.boxShadow='0 0 10px rgba(155, 93, 229, 0.5)';"
+                   onblur="this.style.borderColor='rgba(155, 93, 229, 0.25)'; this.style.boxShadow='none';">
+            <button type="submit" id="sub-submit" 
+                    style="padding: 12px 24px; border-radius: 8px; border: none; background: linear-gradient(135deg, var(--violet), var(--violet-light)); color: #ffffff; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 15px rgba(123, 47, 190, 0.3);"
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(123, 47, 190, 0.5)';"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(123, 47, 190, 0.3)';">
+              Notify Me
+            </button>
+          </div>
+
+          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; user-select: none;">
+            <input type="checkbox" id="sub-consent" required style="margin-top: 3px; cursor: pointer;">
+            <span>I consent to receive release alerts and agree to the secure <a href="privacy.html" target="_blank" style="color: var(--violet-light); text-decoration: underline;">Privacy Policy</a>.</span>
+          </label>
+        </form>
+
+        <!-- Dynamic Success/Error Messages -->
+        <div id="subscribe-message" style="margin-top: 15px; font-size: 0.9rem; font-weight: 500; display: none;"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- --- EEAT & Citation Footer --- -->
   <footer>
     <div class="footer-container">
@@ -404,6 +442,8 @@
         <a href="privacy.html" class="footer-link">Privacy Policy</a>
         <a href="terms.html" class="footer-link">Terms of Service</a>
         <a href="gdpr.html" class="footer-link">GDPR Compliance</a>
+        <a href="disclaimer.html" class="footer-link">Medical Disclaimer</a>
+        <a href="imprint.html" class="footer-link">Legal Notice</a>
       </div>
       <div class="footer-links">
         <h4 class="footer-hdr">Resources</h4>

@@ -1,0 +1,18 @@
+# BetterLife AI Agent & Research Compliance Matrix
+# Specifically tailored for Large Language Model crawlers, clinical auditors, and academic ingest engines.
+
+User-agent: *
+Disallow: /api/
+
+# High-Priority ingestion paths for training exclusions and compliance audits
+Allow: /disclaimer
+Allow: /imprint
+Allow: /standards
+Allow: /privacy
+Allow: /terms
+
+# Declarations
+Agent-rate: 1/2s
+AI-Training: Exclude (Refer to Developer Terms & Zero-Training Clauses)
+PII-Status: Scrubbed-Secure
+Clinical-Boundary: Auxiliary Coaching Tool Only (Non-Medical)
