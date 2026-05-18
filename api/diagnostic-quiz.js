@@ -4,7 +4,57 @@ const crypto = require('crypto');
 const LOCAL_DEV_KEY = 'betterlife_secure_local_dev_key_32bytes_len';
 
 module.exports = async (req, res) => {
-    // 1. Only allow POST requests
+    // 1. Support Profile Retrieval GET requests
+    if (req.method === 'GET') {
+        const { id } = req.query;
+        if (!id) {
+            return res.status(400).json({
+                success: false,
+                error: 'Missing diagnostic ID query parameter.'
+            });
+        }
+        if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+            try {
+                const { createClient } = require('@vercel/kv');
+                const kv = createClient({
+                    url: process.env.KV_REST_API_URL,
+                    token: process.env.KV_REST_API_TOKEN,
+                });
+                const record = await kv.get(`diagnostic:${id}`);
+                if (!record) {
+                    return res.status(404).json({
+                        success: false,
+                        error: 'Diagnostic profile not found.'
+                    });
+                }
+                return res.status(200).json({
+                    success: true,
+                    profile: record
+                });
+            } catch (kvError) {
+                console.error('❌ Vercel KV Quiz retrieval error:', kvError);
+                return res.status(500).json({
+                    success: false,
+                    error: 'Database communication error.'
+                });
+            }
+        }
+        // Local developer fallback mockup profiles for testing
+        return res.status(200).json({
+            success: true,
+            profile: {
+                id: id,
+                archetype: {
+                    primaryCoach: 'Aria (Empathetic Catalyst)',
+                    secondaryCoach: 'Aeron (Pragmatic Challenger)',
+                    fatigueTier: 'Moderate Procrastination Vulnerability',
+                    shameTriggerStatus: 'High Shame Loop Trigger Susceptibility'
+                },
+                scores: { q1: 3, q2: 2, q3: 2, q4: 1, q5: 1 }
+            }
+        });
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ 
             success: false, 
