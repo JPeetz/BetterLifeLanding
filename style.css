@@ -277,12 +277,15 @@ nav {
 
 /* --- Feature Grid ("What You Get") --- */
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
 .card {
+  flex: 1 1 320px;
+  max-width: 360px;
   background: var(--surface);
   border: 1px solid var(--border-color);
   border-radius: 24px;
