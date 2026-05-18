@@ -88,9 +88,10 @@
       <p class="hero-desc">
         Welcome to BetterLife, the ultimate AI-powered life coaching companion built to help you overcome procrastination, manage executive fatigue, and build lasting habits entirely on your terms.
       </p>
-      <div class="hero-btns">
-        <a href="#features" class="btn-secondary">Explore Features</a>
+      <div class="hero-btns" style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
         <a href="#" class="btn-cta">Download for iOS</a>
+        <a href="#" class="btn-cta" style="background: linear-gradient(135deg, #00B0FF, #00E5FF); box-shadow: 0 4px 15px rgba(0, 176, 255, 0.4);">Download for Android</a>
+        <a href="#features" class="btn-secondary">Explore Features</a>
       </div>
     </div>
     <div class="hero-showcase">
@@ -99,6 +100,44 @@
       </div>
     </div>
   </header>
+
+  <!-- --- GET NOTIFIED ON THE OFFICIAL RELEASE SECTION --- -->
+  <section id="subscribe" style="padding: 80px 0; background: rgba(8, 4, 27, 0.35); border-top: 1px solid rgba(155, 93, 229, 0.15); border-bottom: 1px solid rgba(155, 93, 229, 0.15);">
+    <div class="container" style="max-width: 600px; margin: 0 auto; padding: 0 20px; text-align: center;">
+      <div style="background: rgba(26, 21, 72, 0.45); backdrop-filter: blur(20px); border: 1px solid rgba(155, 93, 229, 0.25); border-radius: 16px; padding: 40px; box-shadow: 0 15px 35px rgba(8, 4, 27, 0.5);">
+        <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.01em;">Get Notified on the Release</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.5;">
+          Be the first to optimize your executive focus. Subscribe for instant access key alerts and secure launch updates.
+        </p>
+
+        <form id="subscribe-form" style="display: flex; flex-direction: column; gap: 12px; text-align: left;">
+          <!-- Honeypot anti-spam hidden input -->
+          <input type="text" name="honeypot" id="sub-honeypot" style="display: none;" autocomplete="off" tabIndex="-1">
+          
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="email" id="sub-email" placeholder="Enter your email address" required 
+                   style="flex: 1; min-width: 250px; padding: 12px 18px; border-radius: 8px; border: 1px solid rgba(155, 93, 229, 0.25); background: rgba(8, 4, 27, 0.5); color: #ffffff; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: all 0.3s ease;"
+                   onfocus="this.style.borderColor='var(--violet-light)'; this.style.boxShadow='0 0 10px rgba(155, 93, 229, 0.5)';"
+                   onblur="this.style.borderColor='rgba(155, 93, 229, 0.25)'; this.style.boxShadow='none';">
+            <button type="submit" id="sub-submit" 
+                    style="padding: 12px 24px; border-radius: 8px; border: none; background: linear-gradient(135deg, var(--violet), var(--violet-light)); color: #ffffff; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 15px rgba(123, 47, 190, 0.3);"
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(123, 47, 190, 0.5)';"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(123, 47, 190, 0.3)';">
+              Notify Me
+            </button>
+          </div>
+
+          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; user-select: none;">
+            <input type="checkbox" id="sub-consent" required style="margin-top: 3px; cursor: pointer;">
+            <span>I consent to receive release alerts and agree to the secure <a href="privacy.html" target="_blank" style="color: var(--violet-light); text-decoration: underline;">Privacy Policy</a>.</span>
+          </label>
+        </form>
+
+        <!-- Dynamic Success/Error Messages -->
+        <div id="subscribe-message" style="margin-top: 15px; font-size: 0.9rem; font-weight: 500; display: none;"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- --- Core Benefits ("What to Expect") --- -->
   <section class="section" id="features">
@@ -264,13 +303,13 @@
     </div>
 
     <div class="upgrades-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-      <!-- Aeron Male Coach Counterpart -->
+      <!-- Aria & Aeron Dual AI Coaches -->
       <div class="upgrade-card" style="background: var(--surface-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-        <img src="assets/fal_aeron_coach.png" alt="Aeron: Premium Male Coach Counterpart" style="width: 100%; height: 260px; object-fit: cover;">
+        <img src="assets/fal_aeron_coach.png" alt="Aria & Aeron: Premium AI Coach Archetypes" style="width: 100%; height: 260px; object-fit: cover;">
         <div style="padding: 24px;">
-          <h3 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 10px; font-family: var(--font-display);">Male Coach Counterpart: Aeron</h3>
+          <h3 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 10px; font-family: var(--font-display);">Dual AI Coaches: Aria & Aeron</h3>
           <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0;">
-            Aeron represents a complementary "pragmatic challenger" archetype—assertive, structured, and logical. Toggle between Aeron and Aria seamlessly within settings to suit your cognitive mood and requirements.
+            Seamlessly toggle between two specialized coaching archetypes tailored to your immediate mental focus. Aria (Empathetic Catalyst) provides nurturing, reflective support for stress management, while Aeron (Pragmatic Challenger) commands assertive accountability and strict operational execution.
           </p>
         </div>
       </div>
@@ -387,43 +426,7 @@
     </div>
   </section>
 
-  <!-- --- GET NOTIFIED ON THE OFFICIAL RELEASE SECTION --- -->
-  <section id="subscribe" style="padding: 80px 0; background: rgba(8, 4, 27, 0.35); border-top: 1px solid rgba(155, 93, 229, 0.15); border-bottom: 1px solid rgba(155, 93, 229, 0.15);">
-    <div class="container" style="max-width: 600px; margin: 0 auto; padding: 0 20px; text-align: center;">
-      <div style="background: rgba(26, 21, 72, 0.45); backdrop-filter: blur(20px); border: 1px solid rgba(155, 93, 229, 0.25); border-radius: 16px; padding: 40px; box-shadow: 0 15px 35px rgba(8, 4, 27, 0.5);">
-        <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.01em;">Get Notified on the Release</h3>
-        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.5;">
-          Be the first to optimize your executive focus. Subscribe for instant access key alerts and secure launch updates.
-        </p>
 
-        <form id="subscribe-form" style="display: flex; flex-direction: column; gap: 12px; text-align: left;">
-          <!-- Honeypot anti-spam hidden input -->
-          <input type="text" name="honeypot" id="sub-honeypot" style="display: none;" autocomplete="off" tabIndex="-1">
-          
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <input type="email" id="sub-email" placeholder="Enter your email address" required 
-                   style="flex: 1; min-width: 250px; padding: 12px 18px; border-radius: 8px; border: 1px solid rgba(155, 93, 229, 0.25); background: rgba(8, 4, 27, 0.5); color: #ffffff; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: all 0.3s ease;"
-                   onfocus="this.style.borderColor='var(--violet-light)'; this.style.boxShadow='0 0 10px rgba(155, 93, 229, 0.5)';"
-                   onblur="this.style.borderColor='rgba(155, 93, 229, 0.25)'; this.style.boxShadow='none';">
-            <button type="submit" id="sub-submit" 
-                    style="padding: 12px 24px; border-radius: 8px; border: none; background: linear-gradient(135deg, var(--violet), var(--violet-light)); color: #ffffff; font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 4px 15px rgba(123, 47, 190, 0.3);"
-                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(123, 47, 190, 0.5)';"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(123, 47, 190, 0.3)';">
-              Notify Me
-            </button>
-          </div>
-
-          <label style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); cursor: pointer; user-select: none;">
-            <input type="checkbox" id="sub-consent" required style="margin-top: 3px; cursor: pointer;">
-            <span>I consent to receive release alerts and agree to the secure <a href="privacy.html" target="_blank" style="color: var(--violet-light); text-decoration: underline;">Privacy Policy</a>.</span>
-          </label>
-        </form>
-
-        <!-- Dynamic Success/Error Messages -->
-        <div id="subscribe-message" style="margin-top: 15px; font-size: 0.9rem; font-weight: 500; display: none;"></div>
-      </div>
-    </div>
-  </section>
 
   <!-- --- EEAT & Citation Footer --- -->
   <footer>
