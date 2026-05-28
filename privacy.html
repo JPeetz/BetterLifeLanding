@@ -37,6 +37,12 @@
       border-bottom: 1px solid rgba(155, 93, 229, 0.15);
       padding-bottom: 5px;
     }
+    .legal-content h3 {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
     .legal-content p {
       margin-bottom: 15px;
       font-size: 1rem;
@@ -79,7 +85,7 @@
 
   <!-- Content -->
   <div class="legal-container">
-    <a href="index.html" class="back-home">← Back to Home</a>
+    <a href="index.html" class="back-home">&larr; Back to Home</a>
     <h1 class="legal-title">Privacy Policy</h1>
     <div class="legal-subtitle">Last Updated: May 2026 | UK English Version</div>
 
@@ -97,17 +103,45 @@
         <li><strong>No Account Registration Required:</strong> You can use all core features of the coaching application without creating an account or providing your name, email, or credentials to us.</li>
       </ul>
 
-      <h2>2. Third-Party Data Transmission & Processing</h2>
+      <h2>2. Third-Party AI Data Processing &amp; Sharing</h2>
       <p>
-        To provide you with highly customized coaching feedback, the application securely transmits user-typed message inputs to secure, enterprise-grade AI processing servers.
+        To provide you with highly customized coaching feedback, the application securely transmits specific user data to third-party AI processing services. <strong>No data is transmitted until you have provided explicit, affirmative consent through the in-app AI Data Processing Consent screen.</strong>
       </p>
+
+      <h3>2.1 Who Receives Your Data</h3>
       <ul>
-        <li><strong>Secure API Transmissions:</strong> Inputs are sent using secure, encrypted TLS 1.3 endpoints directly to OpenRouter and Anthropic Claude servers.</li>
-        <li><strong>No Personal Identifiers:</strong> We do not transmit your device identifiers, IP addresses, or location data alongside your chat inputs. Your name and focus schedule remain strictly on your local device.</li>
-        <li><strong>Zero Training Clause:</strong> Our data agreements guarantee that your submitted coaching chat logs are <strong>never used to train base AI models</strong>. The third-party processors delete all API payload logs within thirty (30) days of execution.</li>
+        <li><strong>OpenRouter Inc.</strong> (San Francisco, USA) &mdash; API routing intermediary that securely forwards your coaching requests to the AI model provider.</li>
+        <li><strong>Anthropic PBC</strong> (San Francisco, USA) &mdash; AI model provider operating the Claude language model that generates your coaching responses.</li>
       </ul>
 
-      <h2>3. Speech & Voice Dictation Recognition</h2>
+      <h3>2.2 What Data Is Sent</h3>
+      <p>When you send a message in a coaching session, the following data is transmitted:</p>
+      <ul>
+        <li><strong>Your chat messages</strong> &mdash; The text you type or dictate during coaching sessions.</li>
+        <li><strong>Coaching context</strong> &mdash; Your first name, coaching domain, active goals, recent session summaries, coaching tone preference, and selected cultural region.</li>
+      </ul>
+
+      <h3>2.3 What Data Is NOT Sent</h3>
+      <ul>
+        <li>Device identifiers, IDFA, or hardware serial numbers</li>
+        <li>IP addresses or geolocation coordinates</li>
+        <li>Email addresses or payment information</li>
+        <li>Apple Health biometric data (sleep, heart rate, HRV) &mdash; this data is processed exclusively on-device and never transmitted</li>
+      </ul>
+
+      <h3>2.4 Data Retention &amp; Training Prohibition</h3>
+      <ul>
+        <li><strong>Secure API Transmissions:</strong> All data is encrypted in transit using TLS 1.3 endpoints.</li>
+        <li><strong>Retention:</strong> API request logs are automatically deleted by Anthropic within thirty (30) days of execution.</li>
+        <li><strong>Zero Training Clause:</strong> Our data processing agreements guarantee that your submitted coaching chat logs are <strong>never used to train base AI models</strong>.</li>
+      </ul>
+
+      <h3>2.5 Consent Mechanism</h3>
+      <p>
+        Before your first coaching interaction, the app presents a mandatory AI Data Processing Consent screen. This screen clearly identifies who receives your data, what data is sent, and requires you to provide explicit, affirmative consent by checking a consent box before any data is transmitted. You may revoke this consent at any time by deleting all your data via the Profile screen.
+      </p>
+
+      <h2>3. Speech &amp; Voice Dictation Recognition</h2>
       <p>
         BetterLife offers a real-time speech dictation panel to facilitate voice reflection.
       </p>
@@ -115,7 +149,7 @@
         All audio processing is handled directly on your physical iPhone using Apple's native <strong>SFSpeechRecognizer</strong> offline-capable framework. We do not record, store, stream, or transmit your audio clips to any third-party servers. Your voice reflections remain completely private.
       </p>
 
-      <h2>4. Monetization & Payment Processing</h2>
+      <h2>4. Monetization &amp; Payment Processing</h2>
       <p>
         Subscriptions are processed securely via Apple's native <strong>StoreKit 2</strong> framework.
       </p>
@@ -123,7 +157,7 @@
         BetterLife does not capture, store, or process your credit card numbers, billing addresses, or bank account details. Apple acts as the sole merchant of record, managing all transactions securely through your linked Apple ID.
       </p>
 
-      <h2>5. Safety & Crisis Analysis</h2>
+      <h2>5. Safety &amp; Crisis Analysis</h2>
       <p>
         To align with professional coaching standards, user inputs are scanned on-device by our native <strong>SafetyService</strong> utility before reaching the AI API. If critical risk indicators are flagged, the chat stream is aborted locally. We do not report, flag, or share your safety analysis with external agencies unless required under strict statutory legal obligations.
       </p>
